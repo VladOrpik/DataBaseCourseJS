@@ -1,0 +1,206 @@
+
+.createButtons,
+.checkButtons,
+.adminEmail,
+.changeButtons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.createButtons button,
+.checkButtons button,
+.changeButtons button{
+    position: relative;
+    width: 300px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: .3em;
+    font-family: 'Montserrat', sans-serif;
+    height: 40px;
+    margin-left: 8px;
+    border: 1px solid black;
+    background-color:transparent; 
+    transition: .2s ease-in-out;  
+}
+
+/* ОФОРМЛЕНИЕ */
+
+.createButtons button::before,
+.checkButtons button::before,
+.changeButtons button::before{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color:khaki;
+    opacity: .5;
+    left:6px;
+    top:6px;
+    z-index: -1;
+    transition: .25s ease;
+    transform: translate(0, 0);
+}
+.createButtons button:hover::before,
+.checkButtons button:hover::before,
+.changeButtons button:hover::before{
+    background-color:rgb(240, 188, 140);
+    opacity: .7;
+    transform: translate(2px, 2px);
+}
+
+
+
+
+.modalBackgroundPilot,
+.modalBackgroundAirplane,
+.modalBackgroundAirport,
+.modalBackgroundCrew,
+.modalBackgroundFlight,
+.changePilotModal{
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    margin-left: -8px;
+    top: 0px;
+}
+.modalWindowPilot,
+.modalWindowAirplane,
+.modalWindowAirport,
+.modalWindowCrew,
+.modalWindowFlight,
+.changePilotModal .modalWindow{
+    text-align: center;
+    height: 500px;
+    width:600px;
+    background-color: blanchedalmond;
+    margin: auto;
+    margin-top: 100px;
+}
+.modalWindowPilot h2,
+.modalWindowAirplane h2,
+.modalWindowAirport h2,
+.modalWindowCrew h2,
+.modalWindowFlight h2,
+.changePilotModal .modalWindow h2{
+    font-size: 25px;
+    display: inline-block;
+}
+.modalWindowPilot .pilotInput,
+.modalWindowAirplane .airplaneInput,
+.modalWindowAirport .airportInput,
+.modalWindowFlight .flightInput,
+.changePilotModal .modalWindow .changePilotInput{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.modalWindowPilot .pilotInput input,
+.modalWindowAirplane .airplaneInput input,
+.modalWindowAirport .airportInput input,
+.changePilotModal .modalWindow .changePilotInput input{
+    margin: 0px 10px 10px 10px;
+}
+.modalWindowPilot .pilotInput select,
+.modalWindowAirplane .airplaneInput select,
+.modalWindowAirport .airportInput select{
+    margin: 0px 10px 10px 10px;
+}
+
+
+
+
+.pilotsTable,
+.airplanesTable,
+.airportsTable,
+.flightsTable {
+    display:flex;
+    background-color:blanchedalmond;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+} 
+.pilotsTable *,
+.airplanesTable *,
+.airportsTable *,
+.flightsTable *{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+} 
+.pilotsTable .closeTableButton{
+    display: block;
+}
+
+.searchPilotButton{
+
+}
+.searchPilotPanel,
+.searchAirplanePanel,
+.searchAirportPanel,
+.searchFlightPanel{
+    width: 98.5%;
+    height: 13%;
+    position: absolute;
+    background-color:rgb(71, 149, 197, 0.4);
+}
+
+.tableCell{
+    text-align: center;
+    height: 30px;
+}
+
+
+
+.deletePilotButton,
+.deleteAirportButton,
+.deleteAirplaneButton,
+.deleteFlightButton,
+.changePilotButton{
+    text-align: center;
+    height: 30px;
+    cursor: pointer;
+}
+
+.deletePilotButton:hover,
+.deleteAirportButton:hover,
+.deleteAirplaneButton:hover,
+.deleteFlightButton:hover{
+    background-color: rgb(177, 105, 105);
+    color:white;
+    transition: .2s;
+}
+
+.closeTableButton{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(235, 153, 106, 0.5);
+    border: 1px solid black;
+    transition: .2s ease-in-out;
+
+}
+.closeTableButton:hover{
+    background-color:lightcoral;
+    transition: .2s ease;
+}
+
+.changePilotPanel,
+.changeAirplanePanel,
+.changeAirportPanel,
+.changeFlightPanel{
+    display: flex;
+    justify-content: center;
+}
+
+.hide{
+    display: none;
+}
+.open{
+    display: block;
+}
+.openTable{
+    display:flex;
+}

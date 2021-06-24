@@ -1,0 +1,107 @@
+.AppBar{
+	position: fixed;
+    display: flex;
+    justify-content: center;
+	background-color:rgb(37, 77, 122);
+	width:100%;
+	margin-left: -8px;
+	height: 60px;
+	transition: .1s;
+	z-index: 6;
+	top:0;
+}
+
+/* .AppBar div{
+	display: inline;
+	margin: auto;
+} */
+.AppBar .mobileMenuVersion{
+	display: none;
+}
+.AppBar .sectionsMenu button{
+	display: inline;
+	transition: 0.2s;
+	margin:15px 5px;
+	padding: 5px;
+	border: none;
+	background-color: transparent;
+	font-size: 15px;
+	color: white;
+}
+.AppBar .sectionsMenu button a{
+    text-decoration: none;
+    color: white;
+}
+.AppBar .mobileMenuVersion .firstSpan{
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:6px;
+    height: 2px;
+    background-color: white;
+}
+.AppBar .mobileMenuVersion .secondSpan{
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:11px;
+    height: 2px;
+    background-color: white;
+}
+.AppBar .mobileMenuVersion .thirdSpan{
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:16px;
+    height: 2px;
+    background-color: white;
+}
+@media(min-width:635px)
+{
+	.AppBar .sectionsMenu button:hover{
+	transform: translateY(5px);
+	}
+} 
+@media(max-width:635px)
+{
+	.AppBar .sectionsMenu button:hover{
+	transform: translatex(5px);
+	border-left: solid white;
+} 
+}
+
+/* АДАПТИВНЫЙ HEADER */
+@media(max-width:635px)
+{
+    .AppBar{
+        justify-content: flex-start;
+    }
+	.AppBar .sectionsMenu button{
+		display: none;
+	}
+	.AppBar .mobileMenuVersion{
+		cursor: pointer;
+	}
+	.AppBar .mobileMenuVersion{
+	display:block;
+	position: relative;
+	width:20px;
+	height: 15px;
+	margin-top:15px;
+	margin-left: 15px;
+    }
+}
+
+/* BURGERANIMATION */
+@keyframes burgerTransformFirst {
+    to{
+        top:11px;
+        transform: rotate(45deg);
+    }
+}
+@keyframes burgerTransformSecond {
+    to{
+        top:11px;
+        transform: rotate(-45deg);
+    }
+}

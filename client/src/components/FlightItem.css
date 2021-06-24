@@ -1,0 +1,40 @@
+.flight{
+    margin: auto;
+    margin-bottom: 25px;
+    height: 80px;
+    width: 90%;
+    background-color: darkorange;
+    display: flex;
+    justify-content: space-between;
+}
+.flight .departureDate{
+    background-color: darkkhaki;
+}
+.flight .arrivalDate{
+    background-color: darkturquoise;
+}
+.flight .departureTime{
+    background-color: deeppink;
+}
+.flight .arrivalTime{
+    background-color: gold;
+}
+.flight .placeOfDestination{
+    background-color: indianred;
+}
+.flight .departurePoint{
+    background-color: lightblue;
+}
+
+/* Common styles */
+
+.flight .departureDate,
+.flight .arrivalDate,
+.flight .departureTime,
+.flight .arrivalTime,
+.flight .placeOfDestination,
+.flight .departurePoint{
+    font-size: 18px;
+    width: 16%;
+    text-align: center;
+}
